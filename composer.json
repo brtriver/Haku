@@ -1,0 +1,17 @@
+{
+    "name": "brtriver/orehackphp",
+    "description": "microframework with hack",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masao Maeda",
+            "email": "brt.river@gmail.com"
+        }
+    ],
+    "require": {
+	"aura/router": "2.1.0"
+    },
+    "autoload": {
+        "psr-4": {"Haku\\": "src/"}
+    }
+}
