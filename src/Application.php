@@ -63,6 +63,7 @@ class Application
         $path = parse_url($request->server('REQUEST_URI'), PHP_URL_PATH);
         $route = $this->router->match($path, $request->serverAll()->toArray());
         if (!$route) {
+            http_response_code(404);
             echo "No application route was found for that URL path.";
             exit();
         }
