@@ -29,7 +29,7 @@ $app->get('/home', () ==> ['message' => 'this page is home']);
 $app->get('/hello/{name}', $name ==> ['message' => $name]);
 
 // with condition (Aura.Router)
-$app->get('/user/{id}', $name ==> ['id' => $id])->addTokens(['id' => '\d+']);
+$app->get('/user/{id}', $id ==> ['id' => $id])->addTokens(['id' => '\d+']);
 
 // with query parameter
 $app->get('/search', (Request $r) ==> {
