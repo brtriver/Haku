@@ -13,7 +13,7 @@ namespace Haku;
 use Aura\Router\RouterFactory;
 use Aura\Router\Router;
 use Aura\Router\Route;
-use Haku\Request;
+use Haku\RequestInterface;
 
 class Application
 {
@@ -59,7 +59,7 @@ class Application
         return $route;
     }
 
-    public function run(Request $request) : void {
+    public function run(RequestInterface $request) : void {
         $path = parse_url($request->server('REQUEST_URI'), PHP_URL_PATH);
         $route = $this->router->match($path, $request->serverAll()->toArray());
         if (!$route) {

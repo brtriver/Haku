@@ -2,7 +2,7 @@
 // http://cookbook.hacklang.org/recipes/get-and-post/
 namespace Haku;
 
-class Request
+class Request implements RequestInterface
 {
     <<__Memoize>>
     public function query(string $key): mixed {
