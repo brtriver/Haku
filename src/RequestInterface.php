@@ -1,7 +1,7 @@
-<?hh // partial
+<?hh // strict
 namespace Haku;
 
-Interface RequestInterface
+interface RequestInterface
 {
     public function query(string $key): mixed;
 
