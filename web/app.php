@@ -1,5 +1,9 @@
 <?hh // partial
-require __DIR__ . '/../vendor/autoload.php';
+
+$loader = include(__DIR__ . '/../src/Loader.php');
+
+// add your Namespace to loader like below, if you need.
+// $loader->addPrefix('YourVendor', __DIR__ . '/../src');
 
 use Haku\Request;
 
@@ -12,7 +16,7 @@ $app->get('/home', () ==> ['message' => 'this page is home']);
 $app->get('/hello/{name}', $name ==> ['message' => $name]);
 
 // with condition
-$app->get('/user/{id}', $id ==> ['id' => $id])->addTokens(['id' => '\d+']);
+$app->get('/user/{id}', $id ==> ['id' => $id])->addToken(Pair{'id',  '\d+'});
 
 // with query parameter
 $app->get('/search', (Request $r) ==> {

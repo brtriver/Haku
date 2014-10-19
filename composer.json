@@ -9,9 +9,6 @@
         }
     ],
     "require": {
-	"aura/router": "2.1.0"
-    },
-    "autoload": {
-        "psr-4": {"Haku\\": "src/"}
+	"aura/autoload": "~2.0.0"
     }
 }
